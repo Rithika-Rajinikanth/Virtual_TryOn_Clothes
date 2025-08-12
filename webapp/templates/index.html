@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITON-HD Try-On Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Try-On Results</h1>
+
+        <div class="results-grid">
+            {% for pair in image_pairs %}
+            <div class="image-pair" id="pair-{{ pair.id }}">
+                <div class="original-images">
+                    <img src="{{ pair.person_img }}" alt="Original Person" class="person-img">
+                    <img src="{{ pair.cloth_img }}" alt="Shopping Cloth" class="cloth-img">
+                </div>
+                <div class="try-on-display">
+                    <img src="{{ pair.generated_img }}" alt="Generated Try-On" class="generated-img hidden">
+                    <button class="try-on-button">Show Virtual Try-On</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
