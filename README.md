@@ -43,13 +43,16 @@ bash
 Copy
 Edit
 pip install -r requirements.txt
-requirements.txt should include:
 
+requirements.txt should include:
 nginx
 Copy
 Edit
 Flask
 ```
+
+#### Install the VITION_HD Database from the official Websites
+
 ### ▶️ Usage
 ```
 Ensure your datasets/ and results/ folders are populated:
@@ -88,3 +91,4 @@ Displays all three images in a grid format in the browser.
 If the generated image is missing, it will not be displayed (a warning appears in the console).
 If test_pairs.txt is missing, the app will show an error.
 Make sure your static folder mirrors the dataset and result image locations, or adjust the paths in viewer.py.
+
